@@ -14,7 +14,7 @@ cbl_router = Router()
 @cbl_router.callback_query(F.data.startswith('set_'))
 async def cmd_set_brght(call: CallbackQuery):
 
-    bright = int(call.data.replace('set_', ''))
+    bright = str(call.data.replace('set_', ''))
     print(bright)
 
     # async with ChatActionSender()

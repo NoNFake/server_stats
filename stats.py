@@ -48,9 +48,9 @@ def get_bright() -> str:
 
 
 
-def set_bright(a: int):
+def set_bright(a: str):
     args = ['bash', set_brigh, a]
-    print(f"{__name__}: {a}")
+    print(f"{__name__}: {args}")
     try:
         subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return get_bright()
