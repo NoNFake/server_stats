@@ -16,9 +16,14 @@ from callback.bot_clb_msg import cbl_router
 
 from decouple import config
 
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+
+
 TOKEN: str = config("BOT_TOKEN", default=None)
 if TOKEN == '':
     print("Enter ur TOKEN in .env")
+
+logging.info(f"TOKEN: {TOKEN}\n")
 
 dp = Dispatcher()
 
@@ -44,5 +49,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
