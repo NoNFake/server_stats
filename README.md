@@ -13,6 +13,6 @@ sudo docker logs server
 ## restart
 
 ```bash
-sudo docker stop telegram-bot
-sudo docker start telegram-bot
+sudo docker stop server
+sudo docker start server
 ```
