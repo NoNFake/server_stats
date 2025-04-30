@@ -1,0 +1,7 @@
+version: '3.13'
+
+services:
+  bot:
+    build: .
+    container_name: server
+    restart: unless-stopped  
