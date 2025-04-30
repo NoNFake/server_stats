@@ -17,7 +17,7 @@ from callback.bot_clb_msg import cbl_router
 from decouple import config
 
 TOKEN: str = config("BOT_TOKEN", default=None)
-if TOKEN is '':
+if TOKEN == '':
     print("Enter ur TOKEN in .env")
 
 dp = Dispatcher()
