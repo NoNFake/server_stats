@@ -23,6 +23,8 @@ if TOKEN is '':
 dp = Dispatcher()
 
 
+
+
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
 
@@ -32,6 +34,10 @@ async def main() -> None:
     )
 
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN))
+    
+    await bot.send_message(
+        chat_id=897794210,
+        text='server started')
 
     # And the run events dispatching
     await dp.start_polling(bot)

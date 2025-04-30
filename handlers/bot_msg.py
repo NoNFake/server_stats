@@ -10,9 +10,11 @@ from stats import get_bat, get_bright, get_mem, get_full
 start_router = Router()
 
 
+
 # Keyboard
 @start_router.message(CommandStart())
 async def cmd_start(message: Message):
+    # print(message.from_user.id)
     await message.answer(
         text="Hi",
         reply_markup=main_kb()
